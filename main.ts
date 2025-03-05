@@ -77,14 +77,14 @@ co.scan(products[2]);
 co.scan(products[2]);
 co.scan(products[2]); // atv
 co.scan(products[3]); // vga
-//console.log(co.total()); // Expected total: $249.00
+console.log(co.total()); // Expected total: $249.00
 
 co.scan(products[0]); // ipd
 co.scan(products[0]); // ipd
 co.scan(products[0]); // ipd
 co.scan(products[0]); // ipd
 co.scan(products[0]); // ipd
-//console.log(co.total()); // Expected total with bulk discount for ipd
+console.log(co.total()); // Expected total with bulk discount for ipd
 //   const products: Product[] = [
 //     { sku: "ipd", name: "Super iPad", price: 549.99 },
 //     { sku: "mbp", name: "MacBook Pro", price: 1399.99 },
