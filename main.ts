@@ -16,7 +16,6 @@ export class Checkout {
     this.pricingRules = pricingRules;
   }
 
-  // Method to scan an item
   scan(item: Product) {
     this.items.push(item);
   }
@@ -27,7 +26,7 @@ export class Checkout {
 
     // Apply all pricing rules and adjust total accordingly
     for (const rule of this.pricingRules) {
-      total -= rule.apply(this.items); // Apply discounts as a reduction from total
+      total -= rule.apply(this.items);
     }
 
     return total;
@@ -69,25 +68,19 @@ const pricingRules = [appleTvDeal, superIpdBulkDiscount];
 const co = new Checkout(pricingRules);
 
 // Example scans
-co.scan(products[2]); // atv
-co.scan(products[2]); // atv
 co.scan(products[2]);
 co.scan(products[2]);
 co.scan(products[2]);
 co.scan(products[2]);
-co.scan(products[2]); // atv
-co.scan(products[3]); // vga
-console.log(co.total()); // Expected total: $249.00
+co.scan(products[2]);
+co.scan(products[2]);
+co.scan(products[2]);
+co.scan(products[3]);
+console.log(co.total());
 
-co.scan(products[0]); // ipd
-co.scan(products[0]); // ipd
-co.scan(products[0]); // ipd
-co.scan(products[0]); // ipd
-co.scan(products[0]); // ipd
-console.log(co.total()); // Expected total with bulk discount for ipd
-//   const products: Product[] = [
-//     { sku: "ipd", name: "Super iPad", price: 549.99 },
-//     { sku: "mbp", name: "MacBook Pro", price: 1399.99 },
-//     { sku: "atv", name: "Apple TV", price: 109.50 },
-//     { sku: "vga", name: "VGA adapter", price: 30.00 },
-//   ];
+co.scan(products[0]);
+co.scan(products[0]);
+co.scan(products[0]);
+co.scan(products[0]);
+co.scan(products[0]);
+console.log(co.total());
